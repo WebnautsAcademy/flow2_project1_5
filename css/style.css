@@ -1,17 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: normal;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-/*Основная страница index.html*/
+/*Основная страница INDEX*/
 /*Шапка сайта - Навигация*/
-.header {
-    background-color: white;
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px 7px 50px;
+    align-items: center;
+    background: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .navigation-link, .navigation-link-footer{
@@ -24,6 +34,20 @@ a {
 .active-nav-link {
     color: #FF7129;
 }
+ 
+.navigation-list-header {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+ 
+.navigation-list-header li {
+    margin-right: 56px;
+}
+ 
+.navigation-list-header li:last-child {
+    margin-right: 0;
+}
 
 .navigation-list-header, .navigation-list-footer{
     list-style-type: none; /*убирает маркировку со списка*/
@@ -33,6 +57,7 @@ a {
 .header-wrapper-contacts {
     background-color: #20242D;
     color: #ffffff;
+    padding: 10px 50px 10px 50px;
 }
 
 .contacts-link, .header-address, .footer-link-documents {
@@ -42,19 +67,32 @@ a {
     line-height: 14px;
 }
 
+.header-address {
+    margin-right: auto;
+}
+
+.header-contacts-mail {
+    margin-right: 56px;
+}
+
 .header-contacts-mail::before {
     content: url(/img/envelop.svg);
+    margin-right: 9px;
 }
 
 .header-contacts-phone::before {
     content: url(/img/phone.svg);
+    margin-right: 9px;
 }
 
-/*Основная страница - экран приветствия*/
+/*Страница INDEX - экран приветствия*/
 .welcome-section {
     background-color: #455469;
     background-image: url(/img/home-page-welcome-bg.jpg);
     background-size: cover;
+    padding-top: 271px;
+    padding-bottom: 290px;
+    text-align: center;
 }
 
 .welcome-title {
@@ -63,12 +101,12 @@ a {
     line-height: 111px;
     text-align: center;
     color: #FFFFFF;
+    margin: 0;
 }
 
 .welcome-title-description {
     font-size: 16px;
     line-height: 24px;
-    text-align: center;
     color: #FFFFFF;
 }
 
@@ -78,19 +116,39 @@ a {
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
     color: #FFFFFF;
-    width: 187px;
-    height: 49px;
+    padding: 16px 48px;
     border: none;
+    margin-top: 60px;
 }
 
-/*Основная страница - экран с информацией*/
+/*Страница INDEX - экран с информацией*/
+.info-section {
+    display: flex;
+    padding: 130px 200px 115px 200px;
+}
+
+.info-text-wrapper {
+    padding-top: 70px;
+    padding-left: 65px;
+}
+
 .headline {
+    display: flex;
     font-weight: bold;
     font-size: 48px;
     line-height: 97%;
     color: #20242D;
+    margin: 0 0 64px 0;
+}
+
+.headline::before {
+    content: '';
+    display: block;
+    margin-right: 16px;
+    width: 1px;
+    height: 42px;
+    background-color: #FF7129;
 }
 
 .text-container {
@@ -102,6 +160,28 @@ a {
 /*Подвал сайта*/
 .footer {
     background-color: #20242D;
+    text-align: center;
+}
+
+.nav-list-footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px 45px 50px;
+    align-items: center;
+}
+
+.navigation-list-footer {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation-list-footer li {
+    margin-right: 56px;
+}
+
+.navigation-list-footer li:last-child {
+    margin-right: 0;
 }
 
 .navigation-link-footer {
@@ -113,8 +193,7 @@ a {
 }
 
 .button-call {
-    width: 187px;
-    height: 49px;
+    padding: 16px 63px;
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid #FF7129;
     box-sizing: border-box;
@@ -122,38 +201,121 @@ a {
     filter: drop-shadow(0px 4px 28px rgba(255, 113, 41, 0.7));
 }
 
+/*Подвал - ссылки на документы*/
+.footer-link-documents-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 50px 24px 50px;
+}
+
 .footer-line {
-    width: 93.75%;
     height: 1px;
     background: #7B7E85;
     opacity: 0.3;
     border: none;
+    margin: 0 50px 0 50px;
 }
 
 .footer-link-documents {
     color: #7B7E85;
 }
 
-/*Страница О нас*/
+/*Страница ABOUT - экран приветствия*/
 .about-welcome-section {
     background-color: #455469;
     background-image: url(/img/about-page-welcome-bg.jpg);
     background-size: cover;
+    padding: 200px 0 103px 200px;
 }
 
 .headline-about {
+    display: flex;
     font-weight: bold;
     font-size: 48px;
     line-height: 97%;
     color: #FFFFFF;
+    margin: 0;
 }
 
-/*Страница Проекты и Контакты*/
+.headline-about::before {
+    content: '';
+    display: block;
+    margin-right: 16px;
+    width: 1px;
+    height: 52px;
+    background-color: #FF7129;
+}
+
+/*Страница ABOUT - секция с информацией*/
+.about-info-section {
+    display: flex;
+}
+
+.about-text-container-wrapper-left {
+    max-width: 50%;
+    padding: 80px 66px 185px 200px;
+}
+
+.about-text-container-wrapper-right {
+    max-width: 50%;
+    padding: 80px 260px 185px 0;
+}
+
+/*Страница PROJECTS*/
+.projects-welcome-section {
+    padding: 125px 0 50px 200px;
+}
+
 .headline-projects, .headline-contacts {
+    display: flex;
     font-weight: bold;
     font-size: 48px;
     line-height: 97%;
     color: #20242D;
+    margin: 0;
+}
+
+.headline-projects::before, .headline-contacts::before {
+    content: '';
+    display: block;
+    margin-right: 16px;
+    width: 1px;
+    height: 52px;
+    background-color: #FF7129;
+}
+
+.projects-slider-section {
+    padding-bottom: 150px;
+}
+
+.projects-slider-list {
+    list-style-type: none;
+}
+
+/*Страница CONTACTS*/
+.contacts-headline-section {
+    padding: 125px 0 50px 200px;
+}
+
+.contacts-map-section {
+    display: flex;
+}
+
+.contacts-container {
+    width: 50%;
+    padding: 100px 0 0 200px;
+}
+
+.contacts-address, .contacts-mail-wrapper {
+    margin: 12px 0 54px 0;
+}
+
+.contacts-phone-wrapper {
+    margin: 12px 0 174px 0;
+}
+
+.contacts-map-container {
+    width: 50%;
 }
 
 .contacts-description, .contacts-address, .contacts-mail, .contacts-phone {
@@ -173,45 +335,93 @@ a {
 
 .contacts-address::before {
     content: url(/img/point.svg);
+    margin-right: 14px;
 }
 
 .contacts-mail::before {
     content: url(/img/envelop.svg);
+    margin-right: 14px;
 }
 
 .contacts-phone::before {
     content: url(/img/phone.svg);
+    margin-right: 14px;
 }
 
-/*Страница Инсталяция*/
+/*Страница INSTALATION - экран приветствия*/
 .instalation-welcome-section {
     background-color: #455469;
     background-image: url(/img/instalation-page-welcome-bg.jpg);
     background-size: cover;
+    padding: 163px 0 163px 450px;
 }
 
 .headline-instalation-welcome {
     font-size: 72px;
     line-height: 87px;
-    text-align: center;
     color: #FFFFFF;
+    margin: 0;
+}
+
+/*Страница INSTALATION - информация*/
+.instalation-info-section {
+    padding: 120px 450px;
 }
 
 .instalation-info-section h2 {
+    display: flex;
     font-weight: bold;
     font-size: 36px;
     line-height: 44px;
     color: #20242D;
+    margin: 0 0 32px 0;
+}
+
+.instalation-info-section h2::before {
+    content: '';
+    display: block;
+    margin-right: 16px;
+    width: 1px;
+    height: 42px;
+    background-color: #FF7129;
 }
 
 .instalation-info-section p {
     font-size: 16px;
     line-height: 24px;
     color: #20242D;
+    margin: 0;
+}
+
+.instalation-text-container {
+    margin-bottom: 64px;
+}
+
+.image-container-full {
+    margin: 24px 0;
+}
+
+.image-container-half-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+}
+
+.image-container-half {
+    max-width: 47.85%;
+}
+
+.image-container-half img {
+    max-height: 250px;
 }
 
 .instalation-period-container, .instalation-questions-container, .instalation-outcome-container {
     background-color: #F5F5F5;
+}
+
+.instalation-period-container {
+    padding: 16px 24px;
+    margin-bottom: 32px;
 }
 
 .instalation-period-container p {
@@ -224,10 +434,24 @@ a {
     color: #FF7129;
 }
 
+.instalation-questions-container-wrapper {
+    margin: 24px 0;
+}
+
+.instalation-questions-container {
+    padding: 12px 0 12px 20px;
+    margin: 16px 0;
+}
+
 .instalation-questions-container p {
     font-weight: 500;
 }
 
 .instalation-questions-container p::before {
     content: url(/img/arrow.svg);
+    margin-right: 21px;
+}
+
+.instalation-outcome-container {
+    padding: 32px 24px;
 }
