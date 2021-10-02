@@ -13,8 +13,7 @@ a {
     text-decoration: none;
 }
 
-/*Основная страница INDEX*/
-/*Шапка сайта - Навигация*/
+/* ----------------- Шапка сайта - Навигация -----------------*/
 .header {
     display: flex;
     flex-direction: column-reverse;
@@ -76,10 +75,10 @@ a {
 
 .navigation-list-header,
 .navigation-list-footer {
-    list-style-type: none; /*убирает маркировку со списка*/
+    list-style-type: none;
 }
 
-/*Шапка сайта - Строка с контактными данными*/
+/*----------------- Шапка сайта - Строка с контактными данными -----------------*/
 .header-wrapper-contacts {
     background-color: #20242D;
     color: #ffffff;
@@ -113,7 +112,7 @@ a {
     margin-right: 9px;
 }
 
-/*Страница INDEX - экран приветствия*/
+/*----------------- Страница INDEX - экран приветствия -----------------*/
 .welcome-section {
     background-color: #455469;
     background-image: url('../img/home-page-welcome-bg.jpg');
@@ -186,7 +185,7 @@ a {
     background: #FF0000;
 }
 
-/*Страница INDEX - экран с информацией*/
+/*----------------- Страница INDEX - экран с информацией -----------------*/
 .info-section {
     display: flex;
     padding: 130px 200px 115px 200px;
@@ -243,7 +242,7 @@ a {
     color: #20242D;
 }
 
-/*Подвал сайта*/
+/*----------------- Подвал сайта -----------------*/
 .footer {
     background-color: #20242D;
     text-align: center;
@@ -287,7 +286,7 @@ a {
     filter: drop-shadow(0px 4px 28px rgba(255, 113, 41, 0.7));
 }
 
-/*Подвал - ссылки на документы*/
+/*----------------- Подвал - ссылки на документы -----------------*/
 .footer-link-documents-wrapper {
     display: flex;
     justify-content: space-between;
@@ -306,7 +305,7 @@ a {
     color: #7B7E85;
 }
 
-/*Страница ABOUT - экран приветствия*/
+/*----------------- Страница ABOUT - экран приветствия -----------------*/
 .about-welcome-section {
     background-color: #455469;
     background-image: url('../img/about-page-welcome-bg.jpg');
@@ -351,7 +350,7 @@ a {
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.3)
 }
 
-/*Страница ABOUT - секция с информацией*/
+/*----------------- Страница ABOUT - секция с информацией -----------------*/
 .about-info-section {
     display: flex;
     position: relative;
@@ -370,7 +369,7 @@ a {
     padding: 80px 260px 185px 0;
 }
 
-/*Страница PROJECTS*/
+/*----------------- Страница PROJECTS -----------------*/
 .projects-welcome-section {
     padding: 125px 0 50px 200px;
 }
@@ -409,7 +408,7 @@ a {
     list-style-type: none;
 }
 
-/*Страница CONTACTS*/
+/*----------------- Страница CONTACTS -----------------*/
 .contacts-headline-section {
     padding: 125px 0 50px 200px;
 }
@@ -476,7 +475,7 @@ a {
     margin-right: 14px;
 }
 
-/*Страница INSTALATION - экран приветствия*/
+/*----------------- Страница INSTALATION - экран приветствия -----------------*/
 .instalation-welcome-section {
     position: relative;
     background-color: #455469;
@@ -505,7 +504,7 @@ a {
     right: -21px;
 }
 
-/*Страница INSTALATION - информация*/
+/*----------------- Страница INSTALATION - информация -----------------*/
 .instalation-info-section {
     padding: 120px 450px;
 }
@@ -600,8 +599,8 @@ a {
     padding: 32px 24px;
 }
 
-/*Попап элементы*/
-/* .popup-container {
+/*----------------- POP-UPs -----------------*/
+.popup-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -615,11 +614,103 @@ a {
     justify-content: center;
 }
 
-.popup-container-hidden {
+/* .popup-container-hidden {
     display: none;
+} */
+
+/*----------------- POP-UP - Callback -----------------*/
+.popup-callback-container {
+    background-color: #fff;
+    padding: 95px 56px 72px 56px;
+    width: 800px;
 }
 
-.popup-calculator {
-    padding: 20px;
-    background-color: #fff;
-} */
+.popup-headline {
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 97%;
+    color: #20242D;
+    margin: 0;
+}
+
+.popup-headline::before {
+    content: '';
+    display: block;
+    margin-right: 16px;
+    width: 1px;
+    height: 52px;
+    background: #ff7129;
+}
+
+.popup-headline::after {
+    content: 'CALLBACK';
+    position: absolute;
+    bottom: 5px;
+    left: -27px;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 116px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgba(32, 36, 45, 0.3)
+}
+
+.popup-container p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #20242D;
+    margin-bottom: 64px;
+}
+
+/*----------------- POP-UP - Callback Form -----------------*/
+.callback-input-container {
+    display: flex;
+}
+
+.callback-input-description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7B7E85;
+}
+
+.popup-container input {
+    width: 327px;
+    height: 52px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7B7E85;
+    outline: none;
+    margin-top: 12px;
+}
+
+.popup-container input:first-child {
+    margin-right: 30px;
+}
+
+.popup-container input:focus {
+    color: #20242D;
+    border: 1px solid #ff7129;
+    box-shadow: 0px 0px 9px rgba(255, 113, 41, 0.2);
+}
+
+.callback-button {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #FF7129;
+    box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.3);
+    border: none;
+    margin-top: 40px;
+    padding: 16px 65px;
+}
