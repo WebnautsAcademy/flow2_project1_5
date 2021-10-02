@@ -182,6 +182,10 @@ a {
     left: 70px;
 }
 
+.button-red {
+    background: #FF0000;
+}
+
 /*Страница INDEX - экран с информацией*/
 .info-section {
     display: flex;
@@ -595,3 +599,27 @@ a {
 .instalation-outcome-container {
     padding: 32px 24px;
 }
+
+/*Попап элементы*/
+/* .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 36, 45, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-container-hidden {
+    display: none;
+}
+
+.popup-calculator {
+    padding: 20px;
+    background-color: #fff;
+} */
