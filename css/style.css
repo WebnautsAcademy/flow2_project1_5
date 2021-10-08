@@ -45,6 +45,7 @@ a {
     align-items: center;
     background: #FFFFFF;
     box-sizing: border-box;
+    min-width: 1600px;
 }
 
 .navigation-link,
@@ -134,12 +135,13 @@ a {
 /*----------------- Страница INDEX - экран приветствия -----------------*/
 .welcome-section {
     background-color: #455469;
-    background-image: url('../img/home-page-welcome-bg.jpg');
+    background: url('../img/home-page-welcome-bg.jpg') no-repeat center;
     background-size: cover;
     padding-top: 271px;
     padding-bottom: 290px;
     text-align: center;
     position: relative;
+    min-width: 1600px;
 }
 
 .welcome-section::before,
@@ -154,7 +156,7 @@ a {
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.3)
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
 }
 
 .welcome-section::after {
@@ -169,9 +171,9 @@ a {
     font-weight: bold;
     font-size: 92px;
     line-height: 111px;
-    text-align: center;
     color: #FFFFFF;
     margin: 0;
+    padding: 0 40px;
 }
 
 .welcome-title-description {
@@ -181,6 +183,7 @@ a {
 }
 
 .welcome-button {
+    cursor: pointer;
     position: relative;
     background: #FF7129;
     box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.3);
@@ -194,6 +197,7 @@ a {
 }
 
 .welcome-button::after {
+    cursor: default;
     content: url('../img/scroll.svg');
     position: absolute;
     top: 155px;
@@ -206,11 +210,15 @@ a {
 
 /*----------------- Страница INDEX - экран с информацией -----------------*/
 .info-section {
-    display: flex;
-    padding: 130px 200px 115px 200px;
     background-image: url('../img/section-bg.jpg');
     background-repeat: no-repeat;
     background-position: top 100px left;
+}
+
+.info-section-wrapper {
+    width: 1200px;
+    margin: 132px auto 115px auto;
+    display: flex;
 }
 
 .info-img-wrapper {
@@ -265,6 +273,7 @@ a {
 .footer {
     background-color: #20242D;
     text-align: center;
+    min-width: 1600px;
 }
 
 .nav-list-footer-wrapper {
@@ -331,6 +340,7 @@ a {
     background-image: url('../img/about-page-welcome-bg.jpg');
     background-size: cover;
     padding: 200px 0 103px 200px;
+    min-width: 1600px;
 }
 
 .headline-about {
@@ -377,6 +387,7 @@ a {
     background-image: url('../img/section-bg.jpg');
     background-repeat: no-repeat;
     background-position: top 150px left;
+    min-width: 1600px;
 }
 
 .about-text-container-wrapper-left {
@@ -392,6 +403,7 @@ a {
 /*----------------- Страница PROJECTS -----------------*/
 .projects-welcome-section {
     padding: 125px 0 50px 200px;
+    min-width: 1600px;
 }
 
 .headline-projects,
@@ -427,6 +439,7 @@ a {
     position: relative;
     overflow: hidden;
     min-height: 550px;
+    min-width: 1600px;
 }
 
 .projects-slider-list {
@@ -483,6 +496,7 @@ a {
 /*----------------- Страница CONTACTS -----------------*/
 .contacts-headline-section {
     padding: 125px 0 50px 200px;
+    min-width: 1600px;
 }
 
 .headline-contacts::after {
@@ -492,6 +506,7 @@ a {
 
 .contacts-map-section {
     display: flex;
+    min-width: 1600px;
 }
 
 .contacts-container {
@@ -554,6 +569,7 @@ a {
     background-image: url('../img/instalation-page-welcome-bg.jpg');
     background-size: cover;
     padding: 163px 0 163px 450px;
+    min-width: 1600px;
 }
 
 .headline-instalation-welcome {
@@ -579,6 +595,7 @@ a {
 /*----------------- Страница INSTALATION - информация -----------------*/
 .instalation-info-section {
     padding: 120px 450px;
+    min-width: 1600px;
 }
 
 .instalation-info-section h2 {
@@ -691,6 +708,10 @@ a {
 }
 
 /*----------------- POP-UP - Calculator -----------------*/
+.popup-calculator-hidden {
+    display: none;
+}
+
 .popup-calculator {
     position: relative;
     background-color: #fff;
@@ -819,6 +840,10 @@ a {
 }
 
 /*----------------- POP-UP - Callback -----------------*/
+.popup-callback-hidden {
+    display: none;
+}
+
 .popup-callback {
     position: relative;
     background-color: #fff;
@@ -848,7 +873,11 @@ a {
 }
 
 /*----------------- POP-UP - Questions Upper -----------------*/
-.popup-questions-container {
+.popup-questions-hidden {
+    display: none;
+}
+
+.popup-questions {
     position: relative;
     width: 800px;
 }
@@ -894,7 +923,15 @@ a {
     color: #FF7129;
 }
 
+.popup-questions .popup-btn-close {
+    stroke: #fff;
+}
+
 /*----------------- POP-UP - Questions Lower -----------------*/
+.popup-thx-hidden {
+    display: none;
+}
+
 .questions-lower-container {
     padding: 73px 58px 75px 58px;
     background-color: #fff;
