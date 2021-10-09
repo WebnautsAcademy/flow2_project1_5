@@ -36,13 +36,13 @@
         <section class="projects-slider-section">
             <button class="projects-slider-btn-left"></button>
             <ul class="projects-slider-list">
-                <li class="projects-slider-item active">
+                <li class="projects-slider-item slider-center">
                     <img src="img/slide-house.jpg" alt="house with solar panels">
                 </li>
-                <li class="projects-slider-item">
+                <li class="projects-slider-item slider-left">
                     <img src="img/slide-house.jpg" alt="house with solar panels">
                 </li>
-                <li class="projects-slider-item">
+                <li class="projects-slider-item slider-right">
                     <img src="img/slide-house.jpg" alt="house with solar panels">
                 </li>
             </ul>
@@ -69,5 +69,33 @@
             <a class="footer-link-documents" href="#">Ochrona danych osobowych</a>
         </div>
     </footer>
+    <div class="popup-container popup-container-hidden">
+        <div class="popup-callback popup-callback-hidden">
+            <h2 class="popup-headline popup-headline-callback">Oddzwoń</h2>
+            <p>Zostaw swoje dane, a nasz menedżer skontaktuje się z Tobą, aby odpowiedzieć na Twoje pytania.</p>
+            <div class="callback-input-container">
+                <div class="callback-input-name-wrapper">
+                    <form>
+                        <span class="callback-label">Twoje imię</span>
+                        <input type="text" name="name" maxlength="30" placeholder="Wprowadź swoje imię">
+                    </form>
+                </div>
+                <div class="callback-input-tel-wrapper">
+                    <form>
+                        <span class="callback-label">Telefon</span>
+                        <input type="tel" maxlength="10" placeholder="Wprowadź telefon">
+                    </form>
+                </div>
+            </div>
+            <button class="callback-button">Zadzwoń</button>
+            <button class="popup-btn-close popup-call-btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" overflow="visible">
+                    <line x2="50" y2="50" />
+                    <line x1="50" y2="50" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
