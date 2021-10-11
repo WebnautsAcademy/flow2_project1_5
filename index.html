@@ -36,20 +36,22 @@
             <button class="welcome-button">Obliczyć koszt</button>
         </section>
         <section class="info-section">
-            <div class="info-img-wrapper">
-                <img src="img/house.jpg" alt="house with solar panels" width="600" height="600">
-            </div>
-            <div class="info-text-wrapper">
-                <h2 class="headline">Ty i twói dom</h2>
-                <p class="text-container">Zrównoważony rozwój zaczyna się w domu od Ciebie i Twojej rodziny.
-                    Codzienne dokonywane przez ciebie wybory - zarówno duże, jak i małe
-                    mają ogromny wpływ na środowisko. <br><br>
-                    
-                    To wspaniała wiadomość, ponieważ każdy z nas ma moc wpływania
-                    na pozytywne zmiany. <br><br>
-                    
-                    Wszyscy jesteśmy odpowiedzialni za stworzenie zrównoważonego
-                    świata i istnieje tak wiele sposobów, aby to zrobić.</p>
+            <div class="info-section-wrapper">
+                <div class="info-img-wrapper">
+                    <img src="img/house.jpg" alt="house with solar panels">
+                </div>
+                <div class="info-text-wrapper">
+                    <h2 class="headline">Ty i twói dom</h2>
+                    <p class="text-container">Zrównoważony rozwój zaczyna się w domu od Ciebie i Twojej rodziny.
+                        Codzienne dokonywane przez ciebie wybory - zarówno duże, jak i małe
+                        mają ogromny wpływ na środowisko. <br><br>
+                        
+                        To wspaniała wiadomość, ponieważ każdy z nas ma moc wpływania
+                        na pozytywne zmiany. <br><br>
+                        
+                        Wszyscy jesteśmy odpowiedzialni za stworzenie zrównoważonego
+                        świata i istnieje tak wiele sposobów, aby to zrobić.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -73,5 +75,130 @@
             <a class="footer-link-documents" href="#">Ochrona danych osobowych</a>
         </div>
     </footer>
+    <div class="popup-container popup-container-hidden">
+        <!-- Модальное окно Перезвон -->
+        <div class="popup-callback popup-callback-hidden">
+            <h2 class="popup-headline popup-headline-callback">Oddzwoń</h2>
+            <p>Zostaw swoje dane, a nasz menedżer skontaktuje się z Tobą, aby odpowiedzieć na Twoje pytania.</p>
+            <div class="callback-input-container">
+                <div class="callback-input-name-wrapper">
+                    <form>
+                        <span class="callback-label">Twoje imię</span>
+                        <input type="text" name="name" maxlength="30" placeholder="Wprowadź swoje imię">
+                    </form>
+                </div>
+                <div class="callback-input-tel-wrapper">
+                    <form>
+                        <span class="callback-label">Telefon</span>
+                        <input type="tel" maxlength="10" placeholder="Wprowadź telefon">
+                    </form>
+                </div>
+            </div>
+            <button class="callback-button">Zadzwoń</button>
+            <button class="popup-btn-close popup-call-btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" overflow="visible">
+                    <line x2="50" y2="50" />
+                    <line x1="50" y2="50" />
+                </svg>
+            </button>
+        </div>
+        <!-- Модальное окно Калькулятор -->
+        <div class="popup-calculator popup-calculator-hidden">
+            <h2 class="popup-headline">Obliczyć koszt</h2>
+            <p>Wprowadź swoje dane, aby obliczyć przybliżony koszt paneli słonecznych.</p>
+            <form action="">
+                <div class="popup-calc-text-wrapper">
+                    <span class="popup-calc-text-left">Roczne zużycie energii elektrycznej</span>
+                    <span class="popup-calc-text-right">42 200 kWh</span>
+                </div>
+                <input type="range">
+            </form>
+            <div class="calc-select-container">
+                <div class="calc-select-left-container">
+                    <span class="calc-label">Strona świata</span>
+                    <select name="" id="">
+                        <option value="Południowy">Południowy</option>
+                        <option value="Wschodni">Wschodni</option>
+                        <option value="Zachodni">Zachodni</option>
+                    </select>
+                </div>
+                <div class="calc-select-right-container">
+                    <span class="calc-label">Materiał dachu</span>
+                    <select name="" id="">
+                        <option value="Południowy">Południowy</option>
+                        <option value="Wschodni">Wschodni</option>
+                        <option value="Zachodni">Zachodni</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calc-btn-wrapper">
+                <button class="calculator-button" type="button">
+                    Obliczyć    
+                </button>
+            </div>
+            <button class="popup-btn-close popup-calc-btn-close" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" overflow="visible">
+                    <line x2="50" y2="50" />
+                    <line x1="50" y2="50" />
+                </svg>
+            </button>
+        </div>
+        <!-- Модальное окно Вопросы -->
+        <div class="popup-questions popup-questions-hidden">
+            <div class="questions-upper-container">
+                <p class="questions-text-label">Przybliżony koszt:</p>
+                <div class="questions-upper-btn-wrapper">
+                    <h3>40 000 zł</h3>
+                    <button class="questions-upper-btn">Przeliczyć</button>
+                </div>
+            </div>
+            <div class="questions-lower-container">
+                <h2>Jakieś pytania?</h2>
+                <p>Zostaw swoje dane, a nasz menedżer skontaktuje się z Tobą, aby odpowiedzieć na Twoje pytania</p>
+                <div class="questions-input-upper-container">
+                    <div class="questions-input-wrapper">
+                        <form>
+                            <span class="questions-input-label">Twoje imię</span>
+                            <input type="text" name="name" maxlength="30" placeholder="Wprowadź swoje imię">
+                        </form>
+                    </div>
+                    <div class="questions-input-wrapper">
+                        <form>
+                            <span class="questions-input-label">E-mail</span>
+                            <input type="email" name="name" maxlength="50" placeholder="Wprowadź mail">
+                        </form>
+                    </div>
+                </div>
+                <div class="questions-input-lower-container">
+                    <div class="questions-input-wrapper">
+                        <span class="questions-input-label">Telefon</span>
+                        <input type="tel" name="name" maxlength="10" placeholder="Wprowadź telefon">
+                    </div>
+                    <div class="questions-lower-btn-wrapper">
+                        <button class="questions-lower-btn">Wysłać prośbę</button>
+                    </div>
+                </div>
+                <button class="popup-btn-close popup-questions-btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" overflow="visible">
+                        <line x2="50" y2="50" />
+                        <line x1="50" y2="50" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Модальное окно Спасибо -->
+        <div class="popup-thx popup-thx-hidden">
+            <h2>Dziękuję za twoją prośbę</h2>
+            <p>Nasz menedżer wkrótce się z Tobą skontaktuje</p>
+            <button class="thx-btn">Ok</button>
+            <button class="popup-btn-close popup-thx-btn-close" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" overflow="visible">
+                    <line x2="50" y2="50" />
+                    <line x1="50" y2="50" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

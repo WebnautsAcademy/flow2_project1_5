@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.woff');
+    font-weight: 700;
+    font-size: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-SemiBold.woff');
+    font-weight: 600;
+    font-size: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff');
+    font-weight: 400;
+    font-size: normal;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -13,8 +32,7 @@ a {
     text-decoration: none;
 }
 
-/*Основная страница INDEX*/
-/*Шапка сайта - Навигация*/
+/* ----------------- Шапка сайта - Навигация -----------------*/
 .header {
     display: flex;
     flex-direction: column-reverse;
@@ -76,10 +94,10 @@ a {
 
 .navigation-list-header,
 .navigation-list-footer {
-    list-style-type: none; /*убирает маркировку со списка*/
+    list-style-type: none;
 }
 
-/*Шапка сайта - Строка с контактными данными*/
+/*----------------- Шапка сайта - Строка с контактными данными -----------------*/
 .header-wrapper-contacts {
     background-color: #20242D;
     color: #ffffff;
@@ -113,11 +131,13 @@ a {
     margin-right: 9px;
 }
 
-/*Страница INDEX - экран приветствия*/
+/*----------------- Страница INDEX - экран приветствия -----------------*/
 .welcome-section {
     background-color: #455469;
     background-image: url('../img/home-page-welcome-bg.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding-top: 271px;
     padding-bottom: 290px;
     text-align: center;
@@ -136,7 +156,7 @@ a {
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.3)
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
 }
 
 .welcome-section::after {
@@ -151,9 +171,9 @@ a {
     font-weight: bold;
     font-size: 92px;
     line-height: 111px;
-    text-align: center;
     color: #FFFFFF;
     margin: 0;
+    padding: 0 40px;
 }
 
 .welcome-title-description {
@@ -163,6 +183,7 @@ a {
 }
 
 .welcome-button {
+    cursor: pointer;
     position: relative;
     background: #FF7129;
     box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.3);
@@ -176,19 +197,28 @@ a {
 }
 
 .welcome-button::after {
+    cursor: default;
     content: url('../img/scroll.svg');
     position: absolute;
     top: 155px;
     left: 70px;
 }
 
-/*Страница INDEX - экран с информацией*/
+.button-red {
+    background: #FF0000;
+}
+
+/*----------------- Страница INDEX - экран с информацией -----------------*/
 .info-section {
-    display: flex;
-    padding: 130px 200px 115px 200px;
     background-image: url('../img/section-bg.jpg');
     background-repeat: no-repeat;
     background-position: top 100px left;
+}
+
+.info-section-wrapper {
+    width: 1200px;
+    margin: 132px auto 115px auto;
+    display: flex;
 }
 
 .info-img-wrapper {
@@ -239,7 +269,7 @@ a {
     color: #20242D;
 }
 
-/*Подвал сайта*/
+/*----------------- Подвал сайта -----------------*/
 .footer {
     background-color: #20242D;
     text-align: center;
@@ -275,6 +305,7 @@ a {
 }
 
 .button-call {
+    cursor: pointer;
     padding: 16px 63px;
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid #FF7129;
@@ -283,7 +314,7 @@ a {
     filter: drop-shadow(0px 4px 28px rgba(255, 113, 41, 0.7));
 }
 
-/*Подвал - ссылки на документы*/
+/*----------------- Подвал - ссылки на документы -----------------*/
 .footer-link-documents-wrapper {
     display: flex;
     justify-content: space-between;
@@ -302,11 +333,12 @@ a {
     color: #7B7E85;
 }
 
-/*Страница ABOUT - экран приветствия*/
+/*----------------- Страница ABOUT - экран приветствия -----------------*/
 .about-welcome-section {
     background-color: #455469;
     background-image: url('../img/about-page-welcome-bg.jpg');
     background-size: cover;
+    background-position: center;
     padding: 200px 0 103px 200px;
 }
 
@@ -347,7 +379,7 @@ a {
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.3)
 }
 
-/*Страница ABOUT - секция с информацией*/
+/*----------------- Страница ABOUT - секция с информацией -----------------*/
 .about-info-section {
     display: flex;
     position: relative;
@@ -366,7 +398,7 @@ a {
     padding: 80px 260px 185px 0;
 }
 
-/*Страница PROJECTS*/
+/*----------------- Страница PROJECTS -----------------*/
 .projects-welcome-section {
     padding: 125px 0 50px 200px;
 }
@@ -398,14 +430,73 @@ a {
 }
 
 .projects-slider-section {
-    padding-bottom: 150px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 650px;
 }
 
 .projects-slider-list {
     list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: flex;
+    width: 1020px;
+    left: 0;
 }
 
-/*Страница CONTACTS*/
+.projects-slider-item {
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    width: 1020px;
+    height: 495px;
+}
+
+.slider-center {
+    opacity: 1;
+}
+
+.projects-slider-item img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-left {
+    left: -1180px;
+}
+
+.slider-right {
+    right: -1180px;
+}
+
+.projects-slider-btn-left,
+.projects-slider-btn-right {
+    cursor: pointer;
+    position: absolute;
+    background-color: #FF7129;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.3);
+    background-image: url('../img/arrow-slider.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 250px;
+    left: 18%;
+    z-index: 10;
+}
+
+.projects-slider-btn-right {
+    left: unset;
+    right: 18%;
+    transform: rotate(180deg);
+}
+
+/*----------------- Страница CONTACTS -----------------*/
 .contacts-headline-section {
     padding: 125px 0 50px 200px;
 }
@@ -472,12 +563,13 @@ a {
     margin-right: 14px;
 }
 
-/*Страница INSTALATION - экран приветствия*/
+/*----------------- Страница INSTALATION - экран приветствия -----------------*/
 .instalation-welcome-section {
     position: relative;
     background-color: #455469;
     background-image: url('../img/instalation-page-welcome-bg.jpg');
     background-size: cover;
+    background-position: center;
     padding: 163px 0 163px 450px;
 }
 
@@ -501,9 +593,15 @@ a {
     right: -21px;
 }
 
-/*Страница INSTALATION - информация*/
+/*----------------- Страница INSTALATION - информация -----------------*/
 .instalation-info-section {
-    padding: 120px 450px;
+    padding: 120px 0;
+}
+
+.instalation-info-wrapper {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .instalation-info-section h2 {
@@ -595,3 +693,432 @@ a {
 .instalation-outcome-container {
     padding: 32px 24px;
 }
+
+/*----------------- POP-UPs -----------------*/
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 36, 45, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+}
+
+.popup-container-hidden {
+    display: none;
+}
+
+/*----------------- POP-UP - Calculator -----------------*/
+.popup-calculator-hidden {
+    display: none;
+}
+
+.popup-calculator {
+    position: relative;
+    background-color: #fff;
+    padding: 95px 56px 72px 56px;
+    width: 800px;
+}
+
+.popup-headline {
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 97%;
+    color: #20242D;
+    margin: 0;
+}
+
+.popup-headline::before {
+    content: '';
+    display: block;
+    margin-right: 16px;
+    width: 1px;
+    height: 52px;
+    background: #ff7129;
+}
+
+.popup-headline::after {
+    content: 'CALCULATOR';
+    position: absolute;
+    bottom: 5px;
+    left: -27px;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 116px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgba(32, 36, 45, 0.3)
+}
+
+.popup-calc-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-calc-text-left {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7B7E85;
+}
+
+.popup-calc-text-right {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #20242D;
+}
+
+.callback-input-container,
+.calc-select-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calc-label,
+.callback-label,
+.questions-input-label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7B7E85;
+}
+
+.popup-container input,
+.calc-select-container select {
+    width: 327px;
+    height: 52px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7B7E85;
+    outline: none;
+    margin-top: 12px;
+}
+
+.calc-btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-button,
+.callback-button,
+.questions-lower-btn {
+    cursor: pointer;
+    width: 187px;
+    height: 49px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #FF7129;
+    box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.3);
+    border: none;
+    margin-top: 56px;
+}
+
+.popup-btn-close {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    stroke: #20242D;
+    stroke-linecap: round;
+    stroke-width: 10;
+}
+
+/*----------------- POP-UP - Callback -----------------*/
+.popup-callback-hidden {
+    display: none;
+    z-index: 50;
+}
+
+.popup-callback {
+    position: relative;
+    background-color: #fff;
+    padding: 95px 56px 72px 56px;
+    width: 800px;
+}
+
+.popup-headline-callback::after {
+    content: 'CALLBACK';
+}
+
+.popup-container p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #20242D;
+    margin-bottom: 64px;
+}
+
+.popup-container input:focus {
+    color: #20242D;
+    border: 1px solid #ff7129;
+    box-shadow: 0px 0px 9px rgba(255, 113, 41, 0.2);
+}
+
+.callback-button {
+    margin-top: 40px;
+}
+
+/*----------------- POP-UP - Questions Upper -----------------*/
+.popup-questions-hidden {
+    display: none;
+}
+
+.popup-questions {
+    position: relative;
+    width: 800px;
+}
+
+.questions-upper-container {
+    background-color: #FF7129;
+    padding: 72px 58px 75px 72px;
+}
+
+.questions-upper-container p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.questions-upper-btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions-upper-btn-wrapper h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+}
+
+.questions-upper-btn {
+    cursor: pointer;
+    width: 187px;
+    height: 49px;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.3);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    align-self: center;
+    color: #FF7129;
+}
+
+.popup-questions .popup-btn-close {
+    stroke: #fff;
+}
+
+/*----------------- POP-UP - Questions Lower -----------------*/
+.popup-thx-hidden {
+    display: none;
+}
+
+.questions-lower-container {
+    padding: 73px 58px 75px 58px;
+    background-color: #fff;
+}
+
+.questions-lower-container h2 {
+    margin: 0;
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #20242D;
+}
+
+.questions-lower-container h2::before {
+    content: '';
+    display: block;
+    margin-right: 16px;
+    width: 1px;
+    height: 42px;
+    background: #ff7129;
+}
+
+.questions-input-upper-container,
+.questions-input-lower-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions-input-wrapper {
+    width: min-content;
+}
+
+.questions-input-lower-container {
+    margin-top: 24px;
+}
+
+.questions-lower-btn-wrapper {
+    display: flex;
+    align-self: flex-end;
+}
+
+.questions-lower-btn {
+    margin: 0;
+}
+
+.popup-questions-container .popup-btn-close,
+.popup-thx .popup-btn-close {
+    stroke: #fff;
+}
+
+/*----------------- POP-UP - Thanks -----------------*/
+.popup-thx {
+    position: relative;
+    width: 800px;
+    padding: 92px 0 72px 0;
+    text-align: center;
+    background-color: #FF7129;
+}
+
+.popup-thx h2 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.popup-thx h2::before {
+    content: url('../img/check.svg');
+    display: block;
+    margin-bottom: 40px;
+}
+
+.popup-thx p {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 24px 0 56px 0;
+}
+
+.thx-btn {
+    cursor: pointer;
+    width: 187px;
+    height: 49px;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.3);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FF7129;
+}
+
+
+/*----------------- Callculator - Input Range Style -----------------*/
+input[type=range] {
+    width: 100%;
+    height: 0;
+    padding: 0;
+    margin: 34px 0 40px 0;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+}
+input[type=range]:focus {
+    outline: none;
+    border: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    background: #5cd35a;
+    border: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -9px;
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 8px solid #ff7129;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #60d45e;
+}
+input[type=range]::-moz-range-track {
+    background: #5cd35a;
+    border: 0;
+    border-radius: 25px;
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 8px solid #ff7129;
+    border-radius: 50px;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 11.9px 0;
+    color: transparent;
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+    background: #58d256;
+    border: 0;
+    border-radius: 50px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #5cd35a;
+    border: 0;
+    border-radius: 50px;
+}
+input[type=range]::-ms-thumb {
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 8px solid #ff7129;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #5cd35a;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #60d45e;
+    }
